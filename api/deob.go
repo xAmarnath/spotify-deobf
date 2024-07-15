@@ -15,7 +15,8 @@ func Deobfuscate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	cmd := exec.Command("./playplay", key_id, file_id)
+	cmd := exec.Command("bash", "-c", "./playplay", key_id, file_id)
+	
 	out, err := cmd.CombinedOutput()
 
 	if err != nil {
