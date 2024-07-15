@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "build": "chmod x+a ./playplay"
+    "build": "chmod a+x ./playplay"
   }
 }
