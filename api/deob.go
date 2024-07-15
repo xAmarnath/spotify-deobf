@@ -19,7 +19,7 @@ func Deobfuscate(w http.ResponseWriter, r *http.Request) {
 	out, err := cmd.CombinedOutput()
 
 	if err != nil {
-		http.Error(w, "Failed to deobfuscate", http.StatusInternalServerError)
+		http.Error(w, "Failed to deobfuscate: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
 
